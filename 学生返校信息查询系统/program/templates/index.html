@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>登录界面</title>
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="lowin">
+    <div class="lowin-brand">
+        <img src="https://p1.ssl.qhimg.com/t01fd1b39239bca4a94.jpg" alt="logo">
+    </div>
+    <div class="lowin-wrapper">
+        <div class="lowin-box lowin-login">
+            <div class="lowin-box-inner">
+
+                <form action="/login" method="post">
+                    <p>中国石油大学</p>
+                    <p>学生返校信息查询</p>
+                    <div class="lowin-group password-group">
+                        <label>
+                            学号：
+                            <input type="text" name="Id" class="lowin-input" required>
+                        </label>
+                    </div>
+                    <div class="lowin-group password-group">
+                        <label>密码
+                            <input type="password" name="password" autocomplete="current-password" class="lowin-input"
+                                   required>
+                        </label>
+                    </div>
+                    <button class="lowin-btn login-btn">
+                        登录
+                    </button>
+                    {% if message %}
+                        <p style="color: red">{{ message }}</p>
+                    {% endif %}
+                    <p>Copyright&copy;2020 -<strong>计创未来工作室</strong><br>All Rights Reserved.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
