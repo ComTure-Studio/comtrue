@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .fxhead {
+            text-align: center;
+            width: 100%;
+            background-color: #47C3D6;
+            color: #FFFFFF;S
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 2px;
+            border-top-width: 2px;
+            line-height: 80px;
+        }
+
+        .Dividingline {
+            width: 100%;
+            height: 2px;
+            background-color: #FFBF16;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .foot {
+            text-align: center;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #000000;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+    <title>学生信息</title>
+</head>
+<body>
+<div class="fxhead">
+    <p style="color: white;font-family:'华康俪金黑W8(P)';font-size:28px">
+        &nbsp;学生返校信息卡</p>
+</div>
+<div class="container">
+
+    <div style="margin: 12px">
+        <h6 style="color: #ffbf16;font-family:'方正粗活意简体';font-size:20px">学生信息</h6>
+    </div>
+    <div class="Dividingline"></div>
+    <br>
+
+    <table class="table table-hover table-bordered" style="font-size: 22px">
+        {% if student %}
+            <tr>
+                <td><strong style="font-size: 33px">{{ student.name }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px;color:saddlebrown">{{ student.Class }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px">{{ student.phone }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px;color:saddlebrown">{{ student.dorm }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px">{{ student.college }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px;color:saddlebrown">{{ student.teacher }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong style="font-size: 33px">{{ student.teacherphone }}</strong></td>
+            </tr>
+        {% endif %}
+    </table>
+    <br><br>
+</div>
+<div class="foot">
+    Copyright&copy;2020 -<strong>计创未来工作室</strong><br>All Rights Reserved.
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.js"></script>
+</body>
+</html>
